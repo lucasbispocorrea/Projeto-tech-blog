@@ -1,0 +1,185 @@
+/*Limpar formatação padrão*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1em;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background: #e6e6e6;
+}
+
+/*
+****Layout ****
+*/
+
+#area-cabecalho {
+  background: #f7b600;
+  color: #000000;
+  padding: 15px;
+  text-align: center;
+}
+
+#area-logo,
+#area-menu {
+  padding: 10px;
+}
+
+#area-principal {
+  width: 920px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+#area-postagens {
+  width: 660px;
+  float: left;
+}
+
+#area-lateral {
+  width: 240px;
+  float: right;
+}
+
+.postagem {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: white;
+}
+
+.conteudo-lateral {
+  margin-bottom: 20px;
+  padding: 10px;
+  background: white;
+}
+
+#area-rodape {
+  clear: both;
+  background: #ccc;
+  padding: 15px;
+  text-align: center;
+}
+
+/*
+*** Formatação de links ***
+*/
+a {
+  text-decoration: none;
+}
+
+a:link,
+a:visited {
+  color: #f7b600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#area-cabecalho a:link,
+#area-cabecalho a:visited {
+  color: #fff;
+  padding: 8px 12px;
+}
+
+#area-cabecalho a:hover {
+  color: #f7b600;
+  background: #fff;
+  text-decoration: none;
+}
+
+/*
+***formatações em geral ***
+*/
+h1 {
+  color: #4e4e4e;
+  font-size: 2.5em;
+}
+
+h2 {
+  color: #f7b600;
+  font-size: 2em;
+}
+
+h3 {
+  color: #565656;
+  background: #ccc;
+  padding: 5px;
+}
+
+.branco {
+  color: #ffffff;
+}
+
+.data-postagem {
+  font-size: 0.8em;
+  border-bottom: 1px solid #f4f4f4;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.postagem-lateral {
+  font-size: 0.8em;
+  padding: 5px;
+}
+
+/*
+*** Outras Resoluções ***
+*/
+
+@media screen and (max-width: 786px) {
+  * {
+    box-sizing: border-box;
+    max-width: 100%; /* Impede que qualquer elemento ultrapasse a tela */
+    overflow-x: hidden;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Garante que o body não cause rolagem lateral */
+  }
+
+  #area-cabecalho {
+    display: grid;
+    width: 100%;
+  }
+
+  /* Sidebar no topo */
+  #area-lateral {
+    width: 100%;
+    order: -1;
+    margin-bottom: 20px;
+  }
+
+  #area-principal {
+    display: flex;
+    flex-direction: column; /* Postagens abaixo da sidebar */
+    gap: 0px;
+    align-items: center;
+    width: 100%;
+  }
+
+  #area-postagens {
+    width: 100%;
+  }
+
+  .postagem {
+    width: 100%;
+    padding: 10px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Remove espaços extras abaixo das imagens */
+  }
+
+  #area-rodape {
+    width: 100%;
+  }
+}
